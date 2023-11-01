@@ -16,7 +16,7 @@ Micro-Coded Architecture So that interrupt stacking, entry, and exit are done au
 The processor mode can change when exceptions occur. And it can be in one of the following modes:
 Thread Mode: Which is entered on reset.
 Handler Mode: Which is entered on all other exceptions.<br>
-<img src="https://github.com/vasanthkumarch/EXPERIMENT-06-INTERRUPT-GENERATION-USING-PUSHBUTTON-AND-SIMULATING-THE-OUTPUT-/assets/36288975/4f52f2d6-4cdb-4315-b2b2-b55dc1639c43" width=450 height=450><br>
+<img src="https://github.com/vasanthkumarch/EXPERIMENT-06-INTERRUPT-GENERATION-USING-PUSHBUTTON-AND-SIMULATING-THE-OUTPUT-/assets/36288975/4f52f2d6-4cdb-4315-b2b2-b55dc1639c43" width=450 height=400><br>
 The STM32 ARM microcontroller interrupts are generated in the following manner:
 
 The system runs the ISR and then goes back to the main program. The NVIC and EXTI are configured. The Interrupt Service Routine (ISR) also known as the interrupt service routine handler is defined to enable the external interrupts.
@@ -27,7 +27,7 @@ Interrupt Lines (EXTI0-EXTI15)
 The STM32 ARM microcontroller features 23 event sources which are divided into two sections. The first section corresponds t external pins on each port which are P0-P15. The second section corresponds to RTC, ethernet, USB interrupts. Therefore, in the first section, we have 16 lines corresponding to line0 till line15. All of these map to a pin number.
 The diagram below shows how the GPIO pins are connected to the 16 interrupt lines:
 
-<img src="https://github.com/vasanthkumarch/EXPERIMENT-06-INTERRUPT-GENERATION-USING-PUSHBUTTON-AND-SIMULATING-THE-OUTPUT-/assets/36288975/3e1ededb-144c-4103-a64e-9132b7e06e1b" width=450 height=450>
+<img src="https://github.com/vasanthkumarch/EXPERIMENT-06-INTERRUPT-GENERATION-USING-PUSHBUTTON-AND-SIMULATING-THE-OUTPUT-/assets/36288975/3e1ededb-144c-4103-a64e-9132b7e06e1b" width=450 height=400>
 
 One important thing to note here is that same number pins are connected to line with the same number. All of these then join to form a single line. Additionally, we can not use two pins one one line at the same time. For example out of PA1, PB1, PC1, PD1, PE1, PF1 and PG1 you can only use a single pin out of all these. This is because they are all connected to the same line EXTI1. However you can use PA1 and PA2 at the same time as they are connected with different lines.
 
@@ -163,8 +163,6 @@ void assert_failed(uint8_t *file, uint32_t line)
 {
 }
 #endif 
-
-
 ```
 
 ## Output screen shots of proteus  :
@@ -173,11 +171,11 @@ void assert_failed(uint8_t *file, uint32_t line)
  <img src="https://github.com/VIJAYKUMAR22007124/EXPERIMENT-06-INTERRUPT-GENERATION-USING-PUSHBUTTON-AND-SIMULATING-THE-OUTPUT-/assets/119657657/c3482a7e-b852-4e83-9843-4eaad2cd857c" width=450 height=450>
 
  ### LED OFF:
- <img src="https://github.com/VIJAYKUMAR22007124/EXPERIMENT-06-INTERRUPT-GENERATION-USING-PUSHBUTTON-AND-SIMULATING-THE-OUTPUT-/assets/119657657/4dfcf05c-a13e-4d2e-a2d8-be53a0ea2b1e" width=450 height=450><br>
+ <img src="https://github.com/VIJAYKUMAR22007124/EXPERIMENT-06-INTERRUPT-GENERATION-USING-PUSHBUTTON-AND-SIMULATING-THE-OUTPUT-/assets/119657657/4dfcf05c-a13e-4d2e-a2d8-be53a0ea2b1e" width=450 height=400>
  
  ## CIRCUIT DIAGRAM (EXPORT THE GRAPHICS TO PDF AND ADD THE SCREEN SHOT HERE): 
  
- <img src="https://github.com/VIJAYKUMAR22007124/EXPERIMENT-06-INTERRUPT-GENERATION-USING-PUSHBUTTON-AND-SIMULATING-THE-OUTPUT-/assets/119657657/2f21c0fd-3c78-4d27-ab61-e37f541758f6" width=450 height=450><br>
+ <img src="https://github.com/VIJAYKUMAR22007124/EXPERIMENT-06-INTERRUPT-GENERATION-USING-PUSHBUTTON-AND-SIMULATING-THE-OUTPUT-/assets/119657657/2f21c0fd-3c78-4d27-ab61-e37f541758f6" width=450 height=400>
  
 ## Result :
 Interfacing a push button and interrupt genrateion is simulated using proteus .
